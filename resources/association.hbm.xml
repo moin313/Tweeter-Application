@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+
+    <class name="Day8.Association.Person" table="AssociatePerson">
+        <id name="id" type="int">
+            <column name="id"></column>
+            <generator class="increment"></generator>
+        </id>
+        <property name="name" column="name" type="string"/>
+    </class>
+    <class name="Day8.Association.PhoneNumber" table="AssociatePhoneNumber">
+        <id name="id" type="int">
+            <column name="id"></column>
+            <generator class="increment"></generator>
+        </id>
+        <property name="number" type="string" column="number"/>
+        <many-to-one name="person" column="person_id" class="Day8.Association.Person" cascade="persist"/>
+
+    </class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8" ?>-->
+
+
+<!--<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">-->
+
+<!--    <class name="Day8.Association.Person" table="AssPerson">-->
+<!--        <id name="id" type="int">-->
+<!--            <column name="id"></column>-->
+
+<!--        </id>-->
+<!--        <property name="name" column="name" type="string"/>-->
+<!--        <many-to-one name="number" column="number" class="Day8.Association.PhoneNumber" cascade="persist"/>-->
+
+<!--    </class>-->
+<!--    <class name="Day8.Association.PhoneNumber" table="ASSPhoneNumber">-->
+<!--        <id name="id" type="int">-->
+<!--            <column name="id"></column>-->
+<!--        </id>-->
+<!--        <property name="number" type="string" column="number"/>-->
+<!--        <property name="serviceProvider" type="string" column="service_provider"/>-->
+
+<!--    </class>-->
+<!--</hibernate-mapping>-->

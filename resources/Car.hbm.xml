@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+    <class name="Day8.Car" table="Car">
+        <id name="id" type="java.lang.Integer">
+            <generator class="increment"></generator>
+<!--            <generator class="sequence"></generator>-->
+        </id>
+        <property name="speed" column="speed" type="java.lang.Double"/>
+        <property name="name" column="name" type="java.lang.String"/>
+        <property name="maker" column="maker" type="java.lang.Character"/>
+        <property name="isHatchBack" column="isHatchBack" type="java.lang.Boolean"/>
+        <property name="carNumber" column="carNumber" type="java.lang.Long"/>
+    </class>
+</hibernate-mapping>
